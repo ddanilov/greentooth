@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package org.codeberg.danilov.greentooth;
 
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
@@ -29,11 +29,11 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.card.MaterialCardView;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
-import static com.smilla.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.THEME_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.APP_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.ENABLED_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.THEME_KEY;
 
 public class MainActivity extends AppCompatActivity implements DelayFragment.DelayInterface {
     private int shortAnimationDuration;
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements DelayFragment.Del
                 return true;
             case R.id.action_about:
                 AboutFragment about = new AboutFragment();
-                about.show(getSupportFragmentManager(), "com.smilla.greentooth.AboutFragment");
+                about.show(getSupportFragmentManager(), "org.codeberg.danilov.greentooth.AboutFragment");
                 return true;
             case R.id.action_dark_theme:
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);

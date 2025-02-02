@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package org.codeberg.danilov.greentooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -14,15 +14,15 @@ import androidx.work.WorkManager;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.DEFAULT_DELAY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
-import static com.smilla.greentooth.GreenApplication.NOTIFICATION_TAG;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
-import static com.smilla.greentooth.Util.isBluetoothConnected;
-import static com.smilla.greentooth.Util.isBluetoothEnabled;
+import static org.codeberg.danilov.greentooth.GreenApplication.APP_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.DEFAULT_DELAY;
+import static org.codeberg.danilov.greentooth.GreenApplication.DELAY_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.ENABLED_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.NOTIFICATION_TAG;
+import static org.codeberg.danilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
+import static org.codeberg.danilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
+import static org.codeberg.danilov.greentooth.Util.isBluetoothConnected;
+import static org.codeberg.danilov.greentooth.Util.isBluetoothEnabled;
 
 
 public class BluetoothReceiver extends BroadcastReceiver {
