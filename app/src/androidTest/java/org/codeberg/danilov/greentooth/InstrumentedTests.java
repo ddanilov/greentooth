@@ -388,8 +388,8 @@ public class InstrumentedTests {
     public void testToggledOnAppFunction() {
         BluetoothAdapter bluetoothAdapter = bluetoothTestHelper(true);
         if (bluetoothAdapter != null) {
-            final String testTitle = targetContext.getString(R.string.notification_title);
-            final String testText = targetContext.getString(R.string.notification_body);
+            final String testTitle = targetContext.getString(R.string.post_disable_notification_title);
+            final String testText = targetContext.getString(R.string.post_disable_notification_body);
             assertFalse(bluetoothAdapter.isEnabled());
             UiDevice mDevice = UiDevice.getInstance(getInstrumentation());
             mDevice.openNotification();
