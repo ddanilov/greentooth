@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothProfile;
@@ -17,8 +17,8 @@ import static android.bluetooth.BluetoothProfile.HID_DEVICE;
 import static android.bluetooth.BluetoothProfile.SAP;
 import static android.bluetooth.BluetoothProfile.STATE_CONNECTED;
 import static android.bluetooth.BluetoothProfile.STATE_DISCONNECTED;
-import static com.smilla.greentooth.Util.isBluetoothConnected;
-import static com.smilla.greentooth.Util.isBluetoothEnabled;
+import static io.github.ddanilov.greentooth.Util.isBluetoothConnected;
+import static io.github.ddanilov.greentooth.Util.isBluetoothEnabled;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;

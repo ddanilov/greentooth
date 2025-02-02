@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
@@ -8,13 +8,13 @@ import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
-import static com.smilla.greentooth.GreenApplication.NOTIFICATION_TAG;
-import static com.smilla.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
-import static com.smilla.greentooth.Util.isBluetoothConnected;
-import static com.smilla.greentooth.Util.isBluetoothEnabled;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.NOTIFICATION_TAG;
+import static io.github.ddanilov.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
+import static io.github.ddanilov.greentooth.Util.isBluetoothConnected;
+import static io.github.ddanilov.greentooth.Util.isBluetoothEnabled;
 
 public class BluetoothWorker extends Worker {
 

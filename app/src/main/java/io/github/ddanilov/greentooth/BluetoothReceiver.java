@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -14,15 +14,15 @@ import androidx.work.WorkManager;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.DEFAULT_DELAY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
-import static com.smilla.greentooth.GreenApplication.NOTIFICATION_TAG;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
-import static com.smilla.greentooth.Util.isBluetoothConnected;
-import static com.smilla.greentooth.Util.isBluetoothEnabled;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.DEFAULT_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.DELAY_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.NOTIFICATION_TAG;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
+import static io.github.ddanilov.greentooth.Util.isBluetoothConnected;
+import static io.github.ddanilov.greentooth.Util.isBluetoothEnabled;
 
 
 public class BluetoothReceiver extends BroadcastReceiver {

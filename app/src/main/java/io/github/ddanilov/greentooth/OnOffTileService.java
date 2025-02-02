@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.service.quicksettings.TileService;
 
 import androidx.annotation.RequiresApi;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
 
 @RequiresApi(24)
 public class OnOffTileService extends TileService {

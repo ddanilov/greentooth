@@ -1,5 +1,5 @@
 //TODO: CREATE WRAPPER FUNCTION FOR GETTING DELAY INT FROM SHAREDPREFERENCES
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;
@@ -14,16 +14,16 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.DEFAULT_DELAY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
-import static com.smilla.greentooth.GreenApplication.LAST_NOTIFICATION_ID_KEY;
-import static com.smilla.greentooth.GreenApplication.MAX_MINUTE_DELAY;
-import static com.smilla.greentooth.GreenApplication.MAX_SECOND_DELAY;
-import static com.smilla.greentooth.GreenApplication.NOTIFICATION_TYPE_PRE_DISABLE;
-import static com.smilla.greentooth.GreenApplication.POST_DISABLE_CHANNEL_ID;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_CHANNEL_ID;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.DEFAULT_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.DELAY_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.LAST_NOTIFICATION_ID_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.MAX_MINUTE_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.MAX_SECOND_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.NOTIFICATION_TYPE_PRE_DISABLE;
+import static io.github.ddanilov.greentooth.GreenApplication.POST_DISABLE_CHANNEL_ID;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_CHANNEL_ID;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATION_ID;
 
 class Util {
 

@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.app.Dialog;
 import android.content.pm.PackageManager;
@@ -21,7 +21,7 @@ public class AboutFragment extends DialogFragment {
         //In case something goes wrong
         String version = "1.0";
         try {
-            version = getContext().getPackageManager().getPackageInfo("com.smilla.greentooth", 0).versionName;
+            version = getContext().getPackageManager().getPackageInfo("io.github.ddanilov.greentooth", 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

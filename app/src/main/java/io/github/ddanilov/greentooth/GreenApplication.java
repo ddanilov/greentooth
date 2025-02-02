@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.app.Application;
 import android.app.Notification;
@@ -23,9 +23,9 @@ public class GreenApplication extends Application {
     public static final String PRE_DISABLE_CHANNEL_ID = "preDisableGreentoothChannel";
     public static final String POST_DISABLE_CHANNEL_ID = "postDisableGreentoothChannel";
     public static final String LAST_NOTIFICATION_ID_KEY = "lastNotificationId";
-    public static final String ACTION_TEMP_DISABLE = "com.smilla.greentooth.ACTION_TEMP_DISABLE";
-    public static final String ACTION_DISABLE = "com.smilla.greentooth.ACTION_DISABLE";
-    public static final String ACTION_SWITCH_OFF = "com.smilla.greentooth.ACTION_SWITCH_OFF";
+    public static final String ACTION_TEMP_DISABLE = "io.github.ddanilov.greentooth.ACTION_TEMP_DISABLE";
+    public static final String ACTION_DISABLE = "io.github.ddanilov.greentooth.ACTION_DISABLE";
+    public static final String ACTION_SWITCH_OFF = "io.github.ddanilov.greentooth.ACTION_SWITCH_OFF";
     public static final String NOTIFICATION_TAG = "TAG";
     public static final int NOTIFICATION_TYPE_PRE_DISABLE = 0;
     public static final int NOTIFICATION_TYPE_POST_DISABLE = 1;

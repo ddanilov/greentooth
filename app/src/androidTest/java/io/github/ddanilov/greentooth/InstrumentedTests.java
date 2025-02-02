@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -48,13 +48,13 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static androidx.work.testing.WorkManagerTestInitHelper.initializeTestWorkManager;
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.DEFAULT_DELAY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
-import static com.smilla.greentooth.GreenApplication.ENABLED_KEY;
-import static com.smilla.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
-import static com.smilla.greentooth.Util.sendNotification;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.DEFAULT_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.DELAY_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.Util.sendNotification;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.isA;
 import static org.hamcrest.Matchers.not;
@@ -144,7 +144,7 @@ public class InstrumentedTests {
     @Test
     public void useAppContext() {
         // Context of the app under test.
-        assertEquals("com.smilla.greentooth", targetContext.getPackageName());
+        assertEquals("io.github.ddanilov.greentooth", targetContext.getPackageName());
     }
 
     @Test

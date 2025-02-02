@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,8 +17,8 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Locale;
 
-import static com.smilla.greentooth.GreenApplication.APP_KEY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.DELAY_KEY;
 
 public class DelayFragment extends DialogFragment {
 

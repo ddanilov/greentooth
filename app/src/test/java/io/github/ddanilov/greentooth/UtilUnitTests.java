@@ -1,4 +1,4 @@
-package com.smilla.greentooth;
+package io.github.ddanilov.greentooth;
 
 import android.content.SharedPreferences;
 
@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static com.smilla.greentooth.GreenApplication.DEFAULT_DELAY;
-import static com.smilla.greentooth.GreenApplication.DELAY_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.DEFAULT_DELAY;
+import static io.github.ddanilov.greentooth.GreenApplication.DELAY_KEY;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
