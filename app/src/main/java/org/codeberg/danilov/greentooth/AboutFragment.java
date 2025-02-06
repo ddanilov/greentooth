@@ -26,6 +26,8 @@ public class AboutFragment extends DialogFragment {
             e.printStackTrace();
         }
         stringBuilder.append(version);
+        stringBuilder.append("\n");
+        stringBuilder.append("\n");
         stringBuilder.append(getContext().getText(R.string.about_string));
         final SpannableString message =  new SpannableString(stringBuilder.toString());
         Linkify.addLinks(message, Linkify.ALL);
