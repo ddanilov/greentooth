@@ -13,8 +13,7 @@
     <string name="post_disable_channel_description">Notifications sent after Bluetooth is disabled</string>
     <string name="pre_disable_channel_name">Pre-disabling notifications</string>
     <string name="pre_disable_channel_description">Notifications sent before Bluetooth is disabled</string>
-    <string name="about_string">\n\nCopyright 2020 Nicklas Bergman\nSPDX-License-Identifier: Apache-2.0\n\n
-        https://gitlab.com/nbergman/greentooth/</string>
+    <string name="about_string">Copyright 2020–2021 Nicklas Bergman\nCopyright 2025 Denis Danilov\n\nSPDX-License-Identifier: GPL-3.0-only\n\nhttps://github.com/ddanilov/greentooth</string>
     <string name="about_menu_title">About</string>
     <string name="themes_menu">Theme</string>
     <string name="light_theme">Light</string>
