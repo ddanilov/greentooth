@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -33,40 +32,20 @@ class Util {
         Util.bluetoothProfiles = bluetoothProfiles;
     }
 
-    public static void setBluetoothProfiles(int sdkInt) {
-        Util.bluetoothProfiles = getBuildBluetoothProfiles(sdkInt);
-    }
-
     public static int[] getBluetoothProfiles() {
         if (Util.bluetoothProfiles == null) {
-            Util.bluetoothProfiles = getBuildBluetoothProfiles(Build.VERSION.SDK_INT);
+            Util.bluetoothProfiles = getBuildBluetoothProfiles();
         }
         return Util.bluetoothProfiles;
     }
 
     @SuppressLint("InlinedApi")
     @SuppressWarnings("deprecation")
-    private static int[] getBuildBluetoothProfiles(int sdkInt) {
+    private static int[] getBuildBluetoothProfiles() {
         int[] profiles;
-        if (sdkInt >= 29) {
-            profiles = new int[] {BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
-                    BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER, BluetoothProfile.SAP,
-                    BluetoothProfile.HID_DEVICE, BluetoothProfile.HEARING_AID};
-        } else if (sdkInt >= 28) {
-            profiles = new int[] {BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
-                    BluetoothProfile.HEALTH, BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER,
-                    BluetoothProfile.SAP, BluetoothProfile.HID_DEVICE};
-        } else if (sdkInt >= 23) {
-            profiles = new int[] {BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
-                    BluetoothProfile.HEALTH, BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER,
-                    BluetoothProfile.SAP};
-        } else if (sdkInt >= 18) {
-            profiles = new int[] {BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
-                    BluetoothProfile.HEALTH, BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER};
-        } else {
-            profiles = new int[] {BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
-                    BluetoothProfile.HEALTH};
-        }
+        profiles = new int[]{BluetoothProfile.HEADSET, BluetoothProfile.A2DP,
+                BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER, BluetoothProfile.SAP,
+                BluetoothProfile.HID_DEVICE, BluetoothProfile.HEARING_AID};
         return profiles;
     }
 
