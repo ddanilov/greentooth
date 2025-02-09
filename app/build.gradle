@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 35
 
     defaultConfig {
         applicationId "io.github.ddanilov.greentooth"
@@ -26,10 +25,12 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
-
-    lintOptions {
-        disable 'VectorRaster','NotificationIconCompatibility'
+    namespace 'io.github.ddanilov.greentooth'
+    testNamespace 'io.github.ddanilov.greentooth.test'
+    lint {
+        disable 'VectorRaster', 'NotificationIconCompatibility'
     }
+
 
 }
 
