@@ -20,7 +20,6 @@ import androidx.test.espresso.ViewInteraction;
 import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.filters.SdkSuppress;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.uiautomator.By;
 import androidx.test.uiautomator.UiDevice;
@@ -283,7 +282,6 @@ public class InstrumentedTests {
         }
     }
 
-    @SdkSuppress(minSdkVersion = 18)
     @Test
     public void testPostDisableNotifications() {
         final String testTitle = "Post Disable Title";
@@ -300,7 +298,6 @@ public class InstrumentedTests {
         notificationText.click();
     }
 
-    @SdkSuppress(minSdkVersion = 18)
     @Test
     public void testPreDisableNotifications() {
         final String testTitle = "Pre Disable Title";
@@ -317,7 +314,6 @@ public class InstrumentedTests {
         notificationText.click();
     }
 
-    @SdkSuppress(minSdkVersion = 18)
     @Test
     public void testCanClickNotificationAbortButton() {
         final String testTitle = "Abort button test title";
@@ -337,7 +333,6 @@ public class InstrumentedTests {
         abortButton.click();
     }
 
-    @SdkSuppress(minSdkVersion = 18)
     @Test
     public void testCanClickNotificationDisableButton() {
         final String testTitle = "Disable button test title";
@@ -383,7 +378,6 @@ public class InstrumentedTests {
         return BluetoothAdapter.getDefaultAdapter() != null;
     }
 
-    @SdkSuppress(minSdkVersion = 18)
     @Test
     public void testToggledOnAppFunction() {
         BluetoothAdapter bluetoothAdapter = bluetoothTestHelper(true);

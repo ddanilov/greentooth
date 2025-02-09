@@ -7,12 +7,9 @@ import android.os.IBinder;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
-import androidx.annotation.RequiresApi;
-
 import static org.codeberg.danilov.greentooth.GreenApplication.APP_KEY;
 import static org.codeberg.danilov.greentooth.GreenApplication.ENABLED_KEY;
 
-@RequiresApi(24)
 public class OnOffTileService extends TileService {
 
     @Override
