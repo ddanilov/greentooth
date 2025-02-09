@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 35
+    defaultConfig {
+        compileSdk 35
+    }
 
     defaultConfig {
         applicationId "io.github.ddanilov.greentooth"
@@ -19,7 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             renderscriptOptimLevel = 3
         }
-
     }
     compileOptions {
         sourceCompatibility = 11
@@ -30,8 +31,6 @@ android {
     lint {
         disable 'VectorRaster', 'NotificationIconCompatibility'
     }
-
-
 }
 
 dependencies {
