@@ -5,12 +5,8 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.SharedPreferences;
-import android.os.Build;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDelegate;
-
-import static android.os.Build.VERSION_CODES.O;
 
 
 public class GreenApplication extends Application {
@@ -45,12 +41,7 @@ public class GreenApplication extends Application {
         switch (themeItemId) {
             case R.id.action_default_theme:
                 //Samsung phones have night mode in Android Pie
-                if ((Build.VERSION.SDK_INT > Build.VERSION_CODES.P) || (Build.VERSION.SDK_INT == Build.VERSION_CODES.P
-                    && Build.MANUFACTURER.equalsIgnoreCase("samsung"))) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
-                }
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 break;
             case R.id.action_dark_theme:
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -61,25 +52,20 @@ public class GreenApplication extends Application {
     }
 
     private void createNotificationChannels() {
-    // Create the NotificationChannels, but only on API 26+ because
-    // the NotificationChannel class is new and not in the support library
-        if (Build.VERSION.SDK_INT >= O) {
-            createNotificationChannel(
-                    PRE_DISABLE_CHANNEL_ID,
-                    getString(R.string.pre_disable_channel_name),
-                    getString(R.string.pre_disable_channel_description),
-                    NotificationManager.IMPORTANCE_LOW
-            );
-            createNotificationChannel(
-                    POST_DISABLE_CHANNEL_ID,
-                    getString(R.string.post_disable_channel_name),
-                    getString(R.string.post_disable_channel_description),
-                    NotificationManager.IMPORTANCE_DEFAULT
-            );
-        }
+        createNotificationChannel(
+                PRE_DISABLE_CHANNEL_ID,
+                getString(R.string.pre_disable_channel_name),
+                getString(R.string.pre_disable_channel_description),
+                NotificationManager.IMPORTANCE_LOW
+        );
+        createNotificationChannel(
+                POST_DISABLE_CHANNEL_ID,
+                getString(R.string.post_disable_channel_name),
+                getString(R.string.post_disable_channel_description),
+                NotificationManager.IMPORTANCE_DEFAULT
+        );
     }
 
-    @RequiresApi(O)
     private void createNotificationChannel(String id, String name, String description, int importance) {
             NotificationChannel channel = new NotificationChannel(id, name, importance);
             channel.setDescription(description);
