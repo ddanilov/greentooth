@@ -1,5 +1,11 @@
 package io.github.ddanilov.greentooth;
 
+import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
+import static io.github.ddanilov.greentooth.GreenApplication.THEME_KEY;
+
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -8,7 +14,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.service.quicksettings.TileService;
 import android.view.Menu;
@@ -28,12 +33,6 @@ import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.card.MaterialCardView;
-
-import static io.github.ddanilov.greentooth.GreenApplication.APP_KEY;
-import static io.github.ddanilov.greentooth.GreenApplication.ENABLED_KEY;
-import static io.github.ddanilov.greentooth.GreenApplication.POST_DISABLE_NOTIFICATIONS_KEY;
-import static io.github.ddanilov.greentooth.GreenApplication.PRE_DISABLE_NOTIFICATIONS_KEY;
-import static io.github.ddanilov.greentooth.GreenApplication.THEME_KEY;
 
 public class MainActivity extends AppCompatActivity implements DelayFragment.DelayInterface {
     private int shortAnimationDuration;
@@ -77,9 +76,7 @@ public class MainActivity extends AppCompatActivity implements DelayFragment.Del
                 changeCardColor(switchCard, switchCardEnabledColor, switchCardDisabledColor);
             }
             updateDescription();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                TileService.requestListeningState(this, new ComponentName(this, OnOffTileService.class));
-            }
+            TileService.requestListeningState(this, new ComponentName(this, OnOffTileService.class));
         });
         MaterialCardView switchCard = findViewById(R.id.switchCard);
         switchCard.setOnClickListener(v -> onSwitch.setChecked(!onSwitch.isChecked()));
@@ -156,12 +153,7 @@ public class MainActivity extends AppCompatActivity implements DelayFragment.Del
                 return true;
             case R.id.action_default_theme:
                 //Samsung phones have night mode in Android Pie
-                if ((Build.VERSION.SDK_INT > Build.VERSION_CODES.P) || (Build.VERSION.SDK_INT == Build.VERSION_CODES.P
-                && Build.MANUFACTURER.equalsIgnoreCase("samsung"))) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
-                }
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

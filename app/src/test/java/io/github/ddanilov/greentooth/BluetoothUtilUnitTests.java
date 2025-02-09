@@ -1,13 +1,5 @@
 package io.github.ddanilov.greentooth;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothProfile;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-
 import static android.bluetooth.BluetoothProfile.HEALTH;
 import static android.bluetooth.BluetoothProfile.HEARING_AID;
 import static android.bluetooth.BluetoothProfile.STATE_CONNECTED;
@@ -17,9 +9,16 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
+
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothProfile;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BluetoothUtilUnitTests {
