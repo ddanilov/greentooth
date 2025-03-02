@@ -130,17 +130,15 @@ class Util {
         }
         int minutes = delay / 60;
         int seconds = delay % 60;
-        String minutesString = res.getQuantityString(R.plurals.minutes_delay, minutes, minutes);
         String secondsString = res.getQuantityString(R.plurals.seconds_delay, seconds, seconds);
-        String resultString;
-        if ((minutes > 0) && (seconds > 0)) {
-            resultString = String.format("%s %s", minutesString, secondsString);
-        } else if (minutes > 0) {
-            resultString = String.format("%s", minutesString);
-        } else {
-            resultString = String.format("%s", secondsString);
+        if (minutes == 0) {
+            return String.format("%s", secondsString);
         }
-        return resultString;
+        String minutesString = res.getQuantityString(R.plurals.minutes_delay, minutes, minutes);
+        if (seconds == 0) {
+            return String.format("%s", minutesString);
+        }
+        return String.format("%s %s", minutesString, secondsString);
     }
 
     public static int getSaneDelay(SharedPreferences sharedPreferences) {
