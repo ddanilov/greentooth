@@ -1,6 +1,9 @@
 //TODO: CREATE WRAPPER FUNCTION FOR GETTING DELAY INT FROM SHAREDPREFERENCES
 package io.github.ddanilov.greentooth;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
@@ -141,14 +144,9 @@ class Util {
     }
 
     public static int getSaneDelay(SharedPreferences sharedPreferences) {
-        int delay = sharedPreferences.getInt(DELAY_KEY, DEFAULT_DELAY);
+        int delay = max(0, sharedPreferences.getInt(DELAY_KEY, DEFAULT_DELAY));
         int maxDelay = MAX_MINUTE_DELAY * 60 + MAX_SECOND_DELAY;
-        if (delay > maxDelay) {
-            delay = maxDelay;
-        } else if (delay < 0) {
-            delay = 0;
-        }
-        return delay;
+        return min(delay, maxDelay);
     }
 
 }
